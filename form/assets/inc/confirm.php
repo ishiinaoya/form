@@ -109,7 +109,7 @@
                 foreach ($_POST['function'] as $function) { ?>
                     <input type="hidden" name="function[]" value="<?php echo h($function); ?>">
                 <?php } ?>
-                <input type="hidden" name="question" value="<?php echo h($contact); ?>">
+                <input type="hidden" name="contact" value="<?php echo h($contact); ?>">
                 <input type="hidden" name="agreement" value="<?php echo h($_POST['agreement']); ?>">
             </div>
         </form>
