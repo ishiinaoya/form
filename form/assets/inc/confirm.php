@@ -93,8 +93,8 @@
                 </p>
             </div>
             <div class="p-form__data">
-                <input onclick="history.back()" value="戻る">
-                <input type="submit" name="btn_submit" value="送信">
+                <input type="button" onclick="history.back()" class="p-form__submit" value="戻る">
+                <input type="submit" name="btn_submit" value="送信" class="p-form__submit">
                 <input type="hidden" name="name01" value="<?php echo h($_POST['name01']); ?>">
                 <input type="hidden" name="name02" value="<?php echo h($_POST['name02']); ?>">
                 <input type="hidden" name="email" value="<?php echo h($_POST['email']); ?>">

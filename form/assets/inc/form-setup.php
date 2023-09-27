@@ -5,14 +5,11 @@ $page_flag = 0;
 $error = array();
 
 if (!empty($_POST['btn_confirm'])) {
+    $page_flag = 1;
 
-    if (empty($error)) {
-        $page_flag = 1;
-
-        // セッションの書き込み
-        session_start();
-        $_SESSION['page'] = true;
-    }
+    // セッションの書き込み
+    session_start();
+    $_SESSION['page'] = true;
 } elseif (!empty($_POST['btn_submit'])) {
 
     session_start();
@@ -83,8 +80,6 @@ if (!empty($_POST['btn_confirm'])) {
             $auto_reply_text .= "テキストテスト：" . h($contact)  . "\n\n\n";
         }
 
-        $auto_reply_text .= "テスト送信" . "\n";
-
         // テキストメッセージをセット
         $body = "--__BOUNDARY__\n";
         $body .= "Content-Type: text/plain; charset=\"ISO-2022-JP\"\n\n";
@@ -109,7 +104,6 @@ if (!empty($_POST['btn_confirm'])) {
 
         // 本文を設定
         $admin_reply_text = "これはテスト送信のサンプルです。\n\n\n";
-        $admin_reply_text .= "▲ご入力内容▲\n";
         $admin_reply_text .= "お名前[漢字]：" . h($_POST['name01']) . "\n";
         $admin_reply_text .= "お名前[かな]：" . h($_POST['name02']) . "\n";
         $admin_reply_text .= "メールアドレス：" . h($_POST['email']) . "\n";

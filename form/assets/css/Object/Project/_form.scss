@@ -3,29 +3,7 @@ form.scss
 ----------------------------------------------------------------------------------------*/
 
 .p-form {
-    background-color: #FFE9D6;
     padding: 100px 0;
-
-    &__please {
-        text-align: left;
-        vertical-align: middle;
-        color: #FC8106;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.4rem;
-
-        span {
-            margin-left: 10px;
-        }
-    }
-
-    &__other {
-        text-align: center;
-        color: #FC8106;
-        font-size: 1.4rem;
-        line-height: 35px;
-    }
 
     &__width {
         max-width: 800px;
@@ -38,12 +16,12 @@ form.scss
     }
 
     &__default {
-        width: 80%;
+        width: 100%;
     }
 
     &__top {
         &--label {
-            width: 120px;
+            width: 100%;
             text-align: left;
             margin-right: 20px;
             margin-top: 15px;
@@ -72,14 +50,11 @@ form.scss
     }
 
     &__question {
-        width: 80%;
-        color: #fff;
-        background-color: #FFAA53;
-        padding: 20px 5% 40px;
-        line-height: 30px;
+        color: #000;
+        border: 1px solid #000;
+        padding: 10px 5%;
         border-radius: 5px;
-        font-size: 1.3rem;
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         margin-top: 30px;
 
         span {
@@ -98,11 +73,12 @@ form.scss
     }
 
     &__submit {
-        color: #fff;
-        font-size: 1.6rem;
-        padding: 20px 85px;
-        border-radius: 50px;
-        background-color: #FFAA53;
+        color: #000;
+        width: 200px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        border-radius: 5px;
+        border: 1px solid #000;
     }
 
     &__privacy {
@@ -136,39 +112,10 @@ form.scss
     margin-bottom: 100px;
 }
 
-/* form_back */
-
-.p-form-toTop {
-    margin-top: 50px;
-    text-align: center;
-    line-height: 27px;
-
-    span {
-        font-size: 0.8rem;
-    }
-}
-
 /* thanks */
 
-.p-form {
-    &__thxTxt {
-        line-height: 35px;
-    }
-
-    &__twitter {
-        p {
-            margin: 30px 0;
-
-            a {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &__thxLink {
-        text-align: center;
-        margin-top: 50px;
-    }
+.p-form-thx {
+    text-align: center;
 }
 
 
@@ -236,12 +183,6 @@ label.error {
             }
         }
 
-        &__top {
-            &--label {
-                width: 150px;
-            }
-        }
-
         &__other {
             span {
                 margin: 10px 0 0 0;
@@ -260,12 +201,7 @@ label.error {
 
         &__question {
             font-size: 1rem;
-            padding: 15px 5% 20px;
             line-height: 27px;
-
-            span {
-                font-size: 1.8rem;
-            }
         }
 
         &__default {
