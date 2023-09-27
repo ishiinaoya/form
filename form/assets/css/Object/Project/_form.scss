@@ -1,0 +1,279 @@
+/*----------------------------------------------------------------------------------------
+form.scss
+----------------------------------------------------------------------------------------*/
+
+.p-form {
+    background-color: #FFE9D6;
+    padding: 100px 0;
+
+    &__please {
+        text-align: left;
+        vertical-align: middle;
+        color: #FC8106;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+
+        span {
+            margin-left: 10px;
+        }
+    }
+
+    &__other {
+        text-align: center;
+        color: #FC8106;
+        font-size: 1.4rem;
+        line-height: 35px;
+    }
+
+    &__width {
+        max-width: 800px;
+        margin-inline: auto;
+        margin-top: 70px;
+    }
+
+    &__wrap {
+        margin-bottom: 10px;
+    }
+
+    &__default {
+        width: 80%;
+    }
+
+    &__top {
+        &--label {
+            width: 120px;
+            text-align: left;
+            margin-right: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        &--zip {
+            width: 170px;
+        }
+    }
+
+    &__bottoms {
+        border-top: 1px solid #fff;
+        padding-top: 40px;
+        margin-top: 40px;
+    }
+
+    &__bottom {
+        text-align: left;
+
+        &--center {
+            text-align: center;
+            display: block;
+        }
+    }
+
+    &__question {
+        width: 80%;
+        color: #fff;
+        background-color: #FFAA53;
+        padding: 20px 5% 40px;
+        line-height: 30px;
+        border-radius: 5px;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        margin-top: 30px;
+
+        span {
+            font-size: 2.3rem;
+        }
+    }
+
+    &__checks {
+        line-height: 30px;
+    }
+
+    &__textarea {
+        height: 200px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    &__submit {
+        color: #fff;
+        font-size: 1.6rem;
+        padding: 20px 85px;
+        border-radius: 50px;
+        background-color: #FFAA53;
+    }
+
+    &__privacy {
+        text-align: center;
+        padding: 20px 2% 60px;
+        text-decoration: underline;
+    }
+}
+
+/* 確認画面 */
+
+.p-form {
+    &__confirm {
+        display: flex;
+        padding: 15px 0;
+        line-height: 30px;
+        border-bottom: 1px solid #000;
+
+        label {
+            width: 50%;
+        }
+    }
+
+    &__data {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+.p-confirm-heading {
+    margin-bottom: 100px;
+}
+
+/* form_back */
+
+.p-form-toTop {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 27px;
+
+    span {
+        font-size: 0.8rem;
+    }
+}
+
+/* thanks */
+
+.p-form {
+    &__thxTxt {
+        line-height: 35px;
+    }
+
+    &__twitter {
+        p {
+            margin: 30px 0;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__thxLink {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+
+/* validation */
+
+label.error {
+    color: red;
+    font-size: 0.8rem;
+    display: block;
+    margin: 10px 0;
+}
+
+#agreement-error {
+    text-align: center;
+}
+
+@media(max-width:850px) {
+    .p-form {
+        &__question {
+            width: 100%;
+        }
+
+        &__top {
+            &--zip {
+                width: 100%;
+            }
+        }
+
+        &__zipTxt {
+            padding-top: 10px;
+            display: inline-block;
+        }
+
+        &__default {
+            width: 100%;
+        }
+
+        &__please {
+            span {
+                line-height: 35px;
+            }
+        }
+
+        &__other {
+            span {
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .p-form {
+        &__please {
+            flex-direction: column;
+
+            img {
+                width: 30%;
+            }
+
+            span {
+                text-align: center;
+                margin: 10px 0 0 0;
+                font-size: 1.1rem;
+            }
+        }
+
+        &__top {
+            &--label {
+                width: 150px;
+            }
+        }
+
+        &__other {
+            span {
+                margin: 10px 0 0 0;
+                font-size: 1rem;
+            }
+        }
+
+
+        &__zipTxt {
+            padding-top: 0;
+        }
+
+        &__width {
+            margin-top: 50px;
+        }
+
+        &__question {
+            font-size: 1rem;
+            padding: 15px 5% 20px;
+            line-height: 27px;
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__default {
+            margin-bottom: 10px;
+        }
+
+        &__submit {
+            font-size: 1.1rem;
+        }
+    }
+}

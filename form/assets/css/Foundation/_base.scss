@@ -1,0 +1,74 @@
+@use "../Global/variable" as val;
+
+html {
+    font-weight: bold;
+    font-family: val.$baseFont;
+    // overflow-y: scroll;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+iframe{
+    max-width: 100%;
+}
+
+select {
+    -moz-appearance: menulist;
+    -webkit-appearance: menulist;
+}
+
+input,
+select,
+textarea {
+    background-color: #fff;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.ices {
+    transition: 0.2s;
+}
+
+@media (min-width:851px) {
+    .tab-appea {
+        display: none;
+    }
+}
+
+@media (max-width:850px) {
+    .tab-none {
+        display: none;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
+
+@media (min-width:481px) {
+    .sp-appea {
+        display: none;
+    }
+}
+
+@media (max-width:480px) {
+    .sp-none {
+        display: none;
+    }
+}
