@@ -17,12 +17,7 @@
     <header>
     </header>
     <section class="p-form p-form-thx">
-        <div class="p-form__inner l-contents-container">
-            <p class="p-form__thxTxt">送信完了</p>
-        </div>
-        <div class="p-form__thxLink">
-            <a href="./">TOPに戻る</a>
-        </div>
+        <p>送信完了</p>
     </section>
     <footer class="l-footer">
 
