@@ -1,5 +1,5 @@
 # 参考
-下記サイトを参考に作りました。
+下記サイトを参考に作りました
 改変しておりますが、基本的な動きは踏襲しておりますので、参考にして下さい。
 https://gray-code.com/php/make-the-form-introduction/
 
