@@ -5,31 +5,31 @@
             <span>確認画面</span>
         </p>
         <form method="post" action="">
-            <div class="p-form__confirm">
+            <div class="">
                 <label>お名前[漢字]</label>
                 <p>
                     <?php echo h($_POST['name01']); ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>お名前[かな]</label>
                 <p>
                     <?php echo h($_POST['name02']); ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>メールアドレス</label>
                 <p>
                     <?php echo h($_POST['email']); ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>電話番号</label>
                 <p>
                     <?php echo h($_POST['tel']); ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>性別</label>
                 <p>
                     <?php if ($_POST['gender'] === "男性") {
@@ -42,7 +42,7 @@
                 </p>
             </div>
 
-            <div class="p-form__confirm">
+            <div class="">
                 <label>住所</label>
                 <p>
                     <?php echo h($_POST['zip']); ?><br>
@@ -53,7 +53,7 @@
             </div>
 
 
-            <div class="p-form__confirm">
+            <div class="">
                 <label>セレクトテスト</label>
                 <p>
                     <?php
@@ -65,7 +65,7 @@
                     ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>チェックテスト</label>
                 <ul>
                     <?php foreach ($_POST['function'] as $function_val) { ?>
@@ -75,14 +75,14 @@
                     <?php } ?>
                 </ul>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>テキストテスト</label>
                 <p>
                     <?php $contact = preg_replace("/\{(.*)\}/", '', $_POST['contact']); ?>
                     <?php echo h($contact); ?>
                 </p>
             </div>
-            <div class="p-form__confirm">
+            <div class="">
                 <label>プライバシーポリシー</label>
                 <p>
                     <?php if ($_POST['agreement'] === "同意") {
