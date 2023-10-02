@@ -1,41 +1,41 @@
 <form id="form" class="p-form__width" method="post" action="" enctype="multipart/form-data">
-    <div class="p-form__wrap p-form__top">
-        <label class="p-form__top--label">お名前[漢字]</label>
-        <input type="text" class="p-form__default" name="name01" value="<?php if (!empty($_POST['name01'])) {
+    <div class="">
+        <label class="">お名前[漢字]</label>
+        <input type="text" class="" name="name01" value="<?php if (!empty($_POST['name01'])) {
                                                                             echo h($_POST['name01']);
                                                                         } ?>"><br />
         <p class="error_place_1"></p>
     </div>
-    <div class="p-form__wrap  p-form__top">
-        <label class="p-form__top--label">お名前[かな]</label>
-        <input type="text" class="p-form__default" name="name02" value="<?php if (!empty($_POST['name02'])) {
+    <div class="">
+        <label class="">お名前[かな]</label>
+        <input type="text" class="" name="name02" value="<?php if (!empty($_POST['name02'])) {
                                                                             echo h($_POST['name02']);
                                                                         } ?>"><br />
         <p class="error_place_2"></p>
     </div>
-    <div class="p-form__wrap  p-form__top">
-        <label class="p-form__top--label">メールアドレス</label>
-        <input id="email" type="text" class="p-form__default" name="email" value="<?php if (!empty($_POST['email'])) {
+    <div class="">
+        <label class="">メールアドレス</label>
+        <input id="email" type="text" class="" name="email" value="<?php if (!empty($_POST['email'])) {
                                                                                         echo h($_POST['email']);
                                                                                     } ?>"><br />
         <p class="error_place_3"></p>
     </div>
-    <div class="p-form__wrap  p-form__top">
-        <label class="p-form__top--label">メールアドレス(再入力)</label>
-        <input type="text" class="p-form__default" name="email02" value="<?php if (!empty($_POST['email02'])) {
+    <div class="">
+        <label class="">メールアドレス(再入力)</label>
+        <input type="text" class="" name="email02" value="<?php if (!empty($_POST['email02'])) {
                                                                                 echo h($_POST['email02']);
                                                                             } ?>"><br />
         <p class="error_place_4"></p>
     </div>
-    <div class="p-form__wrap p-form__top">
-        <label class="p-form__top--label">電話番号</label>
-        <input type="text" class="p-form__default" name="tel" value="<?php if (!empty($_POST['tel'])) {
+    <div class="">
+        <label class="">電話番号</label>
+        <input type="text" class="" name="tel" value="<?php if (!empty($_POST['tel'])) {
                                                                             echo h($_POST['tel']);
                                                                         } ?>"><br />
         <p class="error_place_5"></p>
     </div>
-    <div class="p-form__wrap p-form__top">
-        <label class="p-form__top--label">性別</label><br class="tab-appea">
+    <div class="">
+        <label class="">性別</label><br class="tab-appea">
         <label for="gender_male" class=""><input id="gender_male" type="radio" name="gender" value="男性" <?php if (
                                                                                                             !empty($_POST['gender']) &&
                                                                                                             $_POST['gender'] === "男性"
@@ -54,15 +54,15 @@
         <p class="error_place_6"></p>
     </div>
 
-    <div class="p-form__wrap">
-        <label class="p-form__top--label">郵便番号</label><br class="tab-appea">
-        <input type="text" class="p-form__top--zip" id="郵便番号" value="<?php if (!empty($_POST['zip'])) {
+    <div class="">
+        <label class="">郵便番号</label><br>
+        <input type="text" class="" id="郵便番号" value="<?php if (!empty($_POST['zip'])) {
                                                                             echo h($_POST['zip']);
                                                                         } ?>" onKeyUp="AjaxZip3.zip2addr(this, '', 'address1', 'address2');" name="zip" maxlength="7" placeholder="0000000"><span class="p-form__zipTxt"><br class="sp-appea">（ハイフン無しでご入力ください）</span><br>
         <p class="error_place_7"></p>
     </div>
-    <div class="p-form__wrap">
-        <label for="" class="p-form__top--label">都道府県</label><br class="tab-appea">
+    <div class="">
+        <label for="" class="">都道府県</label><br class="tab-appea">
         <select name="address1" class=">
                     <option value="">選択してください</option>
                     <optgroup label=" 東北地方">
@@ -341,26 +341,26 @@
                                     } ?>>沖縄県</option>
         </select><br>
     </div>
-    <div class="p-form__wrap">
+    <div class="">
         <p class="error_place_8"></p>
-        <label class="p-form__top--label">市区町村</label>
-        <input type="text" class="p-form__default" id="市区町村" name="address2" value="<?php if (!empty($_POST['address2'])) {
+        <label class="">市区町村</label>
+        <input type="text" class="" id="市区町村" name="address2" value="<?php if (!empty($_POST['address2'])) {
                                                                                         echo h($_POST['address2']);
                                                                                     } ?>"><br>
         <p class="error_place_9"></p>
     </div>
-    <div class="p-form__wrap">
-        <label class="p-form__top--label">番地・号・ビル名</label>
-        <input type="text" class="p-form__default" id="番地・号" name="address3" value="<?php if (!empty($_POST['address3'])) {
+    <div class="">
+        <label class="">番地・号・ビル名</label>
+        <input type="text" class="" id="番地・号" name="address3" value="<?php if (!empty($_POST['address3'])) {
                                                                                         echo h($_POST['address3']);
                                                                                     } ?>">
         <p class="error_place_10"></p>
     </div>
-    <div class="p-form__bottoms">
-        <div class="p-form__wrap p-form__bottom">
-            <label class="p-form__question p-form__bottom--center">
+    <div class="">
+        <div class="">
+            <label class="">
                 セレクトテスト</label>
-            <select name="how" class="p-form__default">
+            <select name="how" class="">
                 <option value="">選択してください</option>
                 <option value="セレクトテスト01" <?php if (
                                                 !empty($_POST['how']) &&
@@ -379,12 +379,12 @@
 
     </div>
 
-    <div class="p-form__wrap test01 p-form__bottom">
-        <label class="p-form__question p-form__bottom--center ">
+    <div class="">
+        <label class="">
             チェックテスト</label>
-        <div class="p-form__checks p-form__default">
+        <div class="">
             <label>
-                <input type="checkbox" id="sample" class="box01" name="function[]" value="チェックテスト01" <?php if (!empty($_POST['function']) && in_array(
+                <input type="checkbox" id="sample" class="" name="function[]" value="チェックテスト01" <?php if (!empty($_POST['function']) && in_array(
                                                                                                             "チェックテスト01",
                                                                                                             $_POST['function']
                                                                                                         )) {
@@ -393,7 +393,7 @@
                 チェックテスト01
             </label><br class="sp-appea">
             <label>
-                <input type="checkbox" class="box01" name="function[]" value="チェックテスト02" <?php if (!empty($_POST['function']) && in_array("チェックテスト02", $_POST['function'])) {
+                <input type="checkbox" class="" name="function[]" value="チェックテスト02" <?php if (!empty($_POST['function']) && in_array("チェックテスト02", $_POST['function'])) {
                                                                                                 echo "checked";
                                                                                             } ?>> チェックテスト02
             </label><br class="sp-appea">
@@ -401,20 +401,20 @@
         </div>
     </div>
 
-    <div class="p-form__wrap p-form__bottom">
-        <label class="p-form__question p-form__bottom--center">テキストテスト</label>
-        <textarea class="p-form__textarea p-form__bottom--center p-form__default" name="contact" placeholder="(任意・150字まで)"><?php if (!empty($_POST['contact'])) {
+    <div class="">
+        <label class="">テキストテスト</label>
+        <textarea class="" name="contact" placeholder="(任意・150字まで)"><?php if (!empty($_POST['contact'])) {
                                                                                                                                 echo h($_POST['contact']);
                                                                                                                             } ?></textarea>
     </div>
-    <div class="p-form__wrap p-form__default">
-        <label for="agreement" class="p-form__bottom--center"><input id="agreement" type="checkbox" name="agreement" value="同意" <?php if (!empty($_POST['agreement']) && $_POST['agreement'] === "同意") {
+    <div class=" ">
+        <label for="agreement" class=""><input id="agreement" type="checkbox" name="agreement" value="同意" <?php if (!empty($_POST['agreement']) && $_POST['agreement'] === "同意") {
                                                                                                                                     echo 'checked';
                                                                                                                                 } ?>>個人情報保護方針に同意する</label>
         <p class="var error_place_11"></p>
     </div>
-    <div class="p-form__bottom--center p-form__default">
-        <input type="submit" class="p-form__submit" name="btn_confirm" value="応募する">
+    <div class="">
+        <input type="submit" class="" name="btn_confirm" value="応募する">
     </div>
     </div>
 </form>

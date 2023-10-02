@@ -294,8 +294,11 @@ template {
   display: none;
 }
 
+/* 使うときはasで変換
+    プロパティに指定する際はasで変換したもの.任意の変数で指定 */
 html {
   font-weight: bold;
+  font-family: "sans-serif";
 }
 
 img {
@@ -320,26 +323,11 @@ textarea {
   border: 1px solid #DDDDDD;
   border-radius: 5px;
   padding: 10px;
-  vertical-align: revert;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
-}
-
-input[type=radio] {
-  margin-right: 5px;
-}
-
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.2s;
-}
-
-.ices {
-  transition: 0.2s;
 }
 
 @media (min-width: 851px) {
@@ -365,239 +353,28 @@ input[type=radio] {
     display: none;
   }
 }
+/*
+例　読み込み　@use "../Global/mixin" as mix;
+    asでmixに変換
+    指定する際はasで変換したもの.任意の関数で指定
+    @include mix.flex;
+
+*/
+/*----------------------------------------------------------------------------------------
+header.scss
+----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------
+footer.scss
+----------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------
 container.scss
 ----------------------------------------------------------------------------------------*/
-.l-default-container {
-  max-width: 1920px;
-  margin-inline: auto;
-}
-
-.l-contents-container {
-  max-width: 990px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-inline: auto;
-}
-
-.l-icon-container {
-  max-width: 1080px;
-  margin-inline: auto;
-}
-
-/*----------------------------------------------------------------------------------------
-container.scss
-----------------------------------------------------------------------------------------*/
-.l-default-container {
-  max-width: 1920px;
-  margin-inline: auto;
-}
-
-.l-contents-container {
-  max-width: 990px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-inline: auto;
-}
-
-.l-icon-container {
-  max-width: 1080px;
-  margin-inline: auto;
-}
-
-/*----------------------------------------------------------------------------------------
-container.scss
-----------------------------------------------------------------------------------------*/
-main {
-  margin-bottom: 100px;
-}
-
-@media (max-width: 768px) {
-  main {
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-}
-/*----------------------------------------------------------------------------------------
-container.scss
-----------------------------------------------------------------------------------------*/
-.l-default-container {
-  max-width: 1920px;
-  margin-inline: auto;
-}
-
-.l-contents-container {
-  max-width: 990px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-inline: auto;
-}
-
-.l-icon-container {
-  max-width: 1080px;
-  margin-inline: auto;
-}
-
 /*----------------------------------------------------------------------------------------
 form.scss
 ----------------------------------------------------------------------------------------*/
-.p-form {
-  padding: 100px 0;
-}
-.p-form__width {
-  max-width: 800px;
-  margin-inline: auto;
-  margin-top: 70px;
-}
-.p-form__wrap {
-  margin-bottom: 10px;
-}
-.p-form__default {
-  width: 100%;
-}
-.p-form__top--label {
-  width: 100%;
-  text-align: left;
-  margin-right: 20px;
-  margin-top: 15px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-.p-form__top--zip {
-  width: 170px;
-}
-.p-form__bottoms {
-  border-top: 1px solid #fff;
-  padding-top: 40px;
-  margin-top: 40px;
-}
-.p-form__bottom {
-  text-align: left;
-}
-.p-form__bottom--center {
-  text-align: center;
-  display: block;
-}
-.p-form__question {
-  color: #000;
-  border: 1px solid #000;
-  padding: 10px 5%;
-  border-radius: 5px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-.p-form__question span {
-  font-size: 2.3rem;
-}
-.p-form__checks {
-  line-height: 30px;
-}
-.p-form__textarea {
-  height: 200px;
-  margin-bottom: 40px;
-  text-align: left;
-}
-.p-form__submit {
-  color: #000;
-  width: 200px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  border-radius: 5px;
-  border: 1px solid #000;
-}
-.p-form__privacy {
-  text-align: center;
-  padding: 20px 2% 60px;
-  text-decoration: underline;
-}
-
-/* 確認画面 */
-.p-form__confirm {
-  display: flex;
-  padding: 15px 0;
-  line-height: 30px;
-  border-bottom: 1px solid #000;
-}
-.p-form__confirm label {
-  width: 50%;
-}
-.p-form__data {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.p-confirm-heading {
-  margin-bottom: 100px;
-}
-
-/* thanks */
-.p-form-thx {
-  text-align: center;
-}
-
-/* validation */
-label.error {
-  color: red;
-  font-size: 0.8rem;
-  display: block;
-  margin: 10px 0;
-}
-
-#agreement-error {
-  text-align: center;
-}
-
-@media (max-width: 850px) {
-  .p-form__question {
-    width: 100%;
-  }
-  .p-form__top--zip {
-    width: 100%;
-  }
-  .p-form__zipTxt {
-    padding-top: 10px;
-    display: inline-block;
-  }
-  .p-form__default {
-    width: 100%;
-  }
-  .p-form__please span {
-    line-height: 35px;
-  }
-  .p-form__other span {
-    line-height: 35px;
-  }
-}
-@media (max-width: 480px) {
-  .p-form__please {
-    flex-direction: column;
-  }
-  .p-form__please img {
-    width: 30%;
-  }
-  .p-form__please span {
-    text-align: center;
-    margin: 10px 0 0 0;
-    font-size: 1.1rem;
-  }
-  .p-form__other span {
-    margin: 10px 0 0 0;
-    font-size: 1rem;
-  }
-  .p-form__zipTxt {
-    padding-top: 0;
-  }
-  .p-form__width {
-    margin-top: 50px;
-  }
-  .p-form__question {
-    font-size: 1rem;
-    line-height: 27px;
-  }
-  .p-form__default {
-    margin-bottom: 10px;
-  }
-  .p-form__submit {
-    font-size: 1.1rem;
-  }
-}/*# sourceMappingURL=style.css.map */
+/*----------------------------------------------------------------------------------------
+component.scss
+----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------
+utility.scss
+----------------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
