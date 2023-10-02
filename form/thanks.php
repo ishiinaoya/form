@@ -16,10 +16,10 @@
 <body>
     <header>
     </header>
-    <section class="p-form p-form-thx">
-        <p>送信完了</p>
+    <section class="">
+            <p class="">送信完了</p>
     </section>
-    <footer class="l-footer">
+    <footer class="">
 
     </footer>
 </body>
