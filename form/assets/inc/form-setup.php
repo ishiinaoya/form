@@ -5,14 +5,11 @@ $page_flag = 0;
 $error = array();
 
 if (!empty($_POST['btn_confirm'])) {
+    $page_flag = 1;
 
-    if (empty($error)) {
-        $page_flag = 1;
-
-        // セッションの書き込み
-        session_start();
-        $_SESSION['page'] = true;
-    }
+    // セッションの書き込み
+    session_start();
+    $_SESSION['page'] = true;
 } elseif (!empty($_POST['btn_submit'])) {
 
     session_start();
@@ -83,8 +80,6 @@ if (!empty($_POST['btn_confirm'])) {
             $auto_reply_text .= "テキストテスト：" . h($contact)  . "\n\n\n";
         }
 
-        $auto_reply_text .= "テスト送信" . "\n";
-
         // テキストメッセージをセット
         $body = "--__BOUNDARY__\n";
         $body .= "Content-Type: text/plain; charset=\"ISO-2022-JP\"\n\n";
@@ -109,7 +104,6 @@ if (!empty($_POST['btn_confirm'])) {
 
         // 本文を設定
         $admin_reply_text = "これはテスト送信のサンプルです。\n\n\n";
-        $admin_reply_text .= "▲ご入力内容▲\n";
         $admin_reply_text .= "お名前[漢字]：" . h($_POST['name01']) . "\n";
         $admin_reply_text .= "お名前[かな]：" . h($_POST['name02']) . "\n";
         $admin_reply_text .= "メールアドレス：" . h($_POST['email']) . "\n";
@@ -154,6 +148,29 @@ if (!empty($_POST['btn_confirm'])) {
         // 管理者へメール送信
         // mb_send_mail('jema@adfaces.co.jp', $admin_reply_subject, $body, $header02);
         mb_send_mail('toyomura@adfaces.co.jp', $admin_reply_subject, $body, $header02);
+
+        $tel = $_POST['tel'];
+        $list = array(
+            $_POST['name01'],
+            $_POST['name02'],
+            $_POST['email'],
+            '="' . $tel . '"',
+            $_POST['gender'],
+            $_POST['zip'],
+            $_POST['address1'],
+            $_POST['address2'],
+            $_POST['address3'],
+            $_POST['how'],
+            implode(',', $_POST['function']),
+            $_POST['contact'],
+            $_POST['agreement'],
+            date("Y-m-d H:i:s"),
+        );
+        mb_convert_variables('SJIS', 'UTF-8', $list); //文字コードをUTF-8からShiftJISに変更
+        $csv = fopen('file.csv', 'a'); //csvファイルと書き込みモードを指定
+        fputcsv($csv, $list); //変換した配列をcsvファイルに書き込み実行
+        fclose($csv); //csvファイルを閉じる
+
     }
 } else {
     $page_flag = 0;

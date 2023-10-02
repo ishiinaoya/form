@@ -1,9 +1,6 @@
-@use "../Global/variable" as val;
-/* 使うときはasで変換
-    プロパティに指定する際はasで変換したもの.任意の変数で指定 */
 html {
     font-weight: bold;
-    font-family: val.$baseFont;
+    // overflow-y: scroll;
 }
 
 img {
@@ -11,7 +8,7 @@ img {
     object-fit: cover;
 }
 
-iframe{
+iframe {
     max-width: 100%;
 }
 
@@ -27,6 +24,7 @@ textarea {
     border: 1px solid #DDDDDD;
     border-radius: 5px;
     padding: 10px;
+    vertical-align: revert;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -34,6 +32,19 @@ input[type=number]::-webkit-outer-spin-button {
     opacity: 1;
 }
 
+input[type=radio] {
+    margin-right: 5px;
+}
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.ices {
+    transition: 0.2s;
+}
 
 @media (min-width:851px) {
     .tab-appea {

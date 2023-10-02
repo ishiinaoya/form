@@ -1,3 +1,19 @@
 /*----------------------------------------------------------------------------------------
-footer.scss
+container.scss
 ----------------------------------------------------------------------------------------*/
+.l-default-container {
+    max-width: 1920px;
+    margin-inline: auto;
+}
+
+.l-contents-container {
+    max-width: 990px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-inline: auto;
+}
+
+.l-icon-container{
+    max-width: 1080px;
+    margin-inline: auto;
+}

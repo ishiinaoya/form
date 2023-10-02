@@ -1,16 +1,10 @@
 @use "Foundation/reset";
 @use "Foundation/base";
 
-
-@use "Global/mixin";
-@use "Global/variable";
-
 @use "Layout/header";
 @use "Layout/footer";
+@use "Layout/main";
 @use "Layout/container";
 
 @use "Object/Project/form";
 
-@use "Object/Component/component";
-
-@use "Object/Utility/utility";

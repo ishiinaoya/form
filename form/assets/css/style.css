@@ -294,11 +294,8 @@ template {
   display: none;
 }
 
-/* 使うときはasで変換
-    プロパティに指定する際はasで変換したもの.任意の変数で指定 */
 html {
   font-weight: bold;
-  font-family: "sans-serif";
 }
 
 img {
@@ -323,11 +320,26 @@ textarea {
   border: 1px solid #DDDDDD;
   border-radius: 5px;
   padding: 10px;
+  vertical-align: revert;
 }
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   opacity: 1;
+}
+
+input[type=radio] {
+  margin-right: 5px;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.ices {
+  transition: 0.2s;
 }
 
 @media (min-width: 851px) {
@@ -353,46 +365,84 @@ input[type=number]::-webkit-outer-spin-button {
     display: none;
   }
 }
-/*
-例　読み込み　@use "../Global/mixin" as mix;
-    asでmixに変換
-    指定する際はasで変換したもの.任意の関数で指定
-    @include mix.flex;
-
-*/
-/*----------------------------------------------------------------------------------------
-header.scss
-----------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------
-footer.scss
-----------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------
 container.scss
 ----------------------------------------------------------------------------------------*/
+.l-default-container {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.l-contents-container {
+  max-width: 990px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+}
+
+.l-icon-container {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+/*----------------------------------------------------------------------------------------
+container.scss
+----------------------------------------------------------------------------------------*/
+.l-default-container {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.l-contents-container {
+  max-width: 990px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+}
+
+.l-icon-container {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
+/*----------------------------------------------------------------------------------------
+container.scss
+----------------------------------------------------------------------------------------*/
+main {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+/*----------------------------------------------------------------------------------------
+container.scss
+----------------------------------------------------------------------------------------*/
+.l-default-container {
+  max-width: 1920px;
+  margin-inline: auto;
+}
+
+.l-contents-container {
+  max-width: 990px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-inline: auto;
+}
+
+.l-icon-container {
+  max-width: 1080px;
+  margin-inline: auto;
+}
+
 /*----------------------------------------------------------------------------------------
 form.scss
 ----------------------------------------------------------------------------------------*/
 .p-form {
-  background-color: #FFE9D6;
   padding: 100px 0;
-}
-.p-form__please {
-  text-align: left;
-  vertical-align: middle;
-  color: #FC8106;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.4rem;
-}
-.p-form__please span {
-  margin-left: 10px;
-}
-.p-form__other {
-  text-align: center;
-  color: #FC8106;
-  font-size: 1.4rem;
-  line-height: 35px;
 }
 .p-form__width {
   max-width: 800px;
@@ -403,10 +453,10 @@ form.scss
   margin-bottom: 10px;
 }
 .p-form__default {
-  width: 80%;
+  width: 100%;
 }
 .p-form__top--label {
-  width: 120px;
+  width: 100%;
   text-align: left;
   margin-right: 20px;
   margin-top: 15px;
@@ -429,14 +479,11 @@ form.scss
   display: block;
 }
 .p-form__question {
-  width: 80%;
-  color: #fff;
-  background-color: #FFAA53;
-  padding: 20px 5% 40px;
-  line-height: 30px;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 5%;
   border-radius: 5px;
-  font-size: 1.3rem;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   margin-top: 30px;
 }
 .p-form__question span {
@@ -451,11 +498,12 @@ form.scss
   text-align: left;
 }
 .p-form__submit {
-  color: #fff;
-  font-size: 1.6rem;
-  padding: 20px 85px;
-  border-radius: 50px;
-  background-color: #FFAA53;
+  color: #000;
+  width: 200px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid #000;
 }
 .p-form__privacy {
   text-align: center;
@@ -482,29 +530,9 @@ form.scss
   margin-bottom: 100px;
 }
 
-/* form_back */
-.p-form-toTop {
-  margin-top: 50px;
-  text-align: center;
-  line-height: 27px;
-}
-.p-form-toTop span {
-  font-size: 0.8rem;
-}
-
 /* thanks */
-.p-form__thxTxt {
-  line-height: 35px;
-}
-.p-form__twitter p {
-  margin: 30px 0;
-}
-.p-form__twitter p a {
-  text-decoration: underline;
-}
-.p-form__thxLink {
+.p-form-thx {
   text-align: center;
-  margin-top: 50px;
 }
 
 /* validation */
@@ -552,9 +580,6 @@ label.error {
     margin: 10px 0 0 0;
     font-size: 1.1rem;
   }
-  .p-form__top--label {
-    width: 150px;
-  }
   .p-form__other span {
     margin: 10px 0 0 0;
     font-size: 1rem;
@@ -567,11 +592,7 @@ label.error {
   }
   .p-form__question {
     font-size: 1rem;
-    padding: 15px 5% 20px;
     line-height: 27px;
-  }
-  .p-form__question span {
-    font-size: 1.8rem;
   }
   .p-form__default {
     margin-bottom: 10px;
@@ -579,10 +600,4 @@ label.error {
   .p-form__submit {
     font-size: 1.1rem;
   }
-}
-/*----------------------------------------------------------------------------------------
-component.scss
-----------------------------------------------------------------------------------------*/
-/*----------------------------------------------------------------------------------------
-utility.scss
-----------------------------------------------------------------------------------------*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
